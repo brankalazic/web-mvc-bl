@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="base-definition"
+		template="/WEB-INF/views/tiles/layout/defaultLayout.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="header"
+			value="/WEB-INF/views/tiles/template/defaultHeader.jsp"></put-attribute>
+		<put-attribute name="footer"
+			value="/WEB-INF/views/tiles/template/defaultFooter.jsp"></put-attribute>
+		<put-attribute name="menu"
+			value="/WEB-INF/views/tiles/template/defaultMenu.jsp"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+	</definition>
+
+	<!-- MANUFACTURER -->
+
+	<definition name="manufacturer/manufacturer-list" extends="base-definition">
+		<put-attribute name="title" value="Manufacturer list"></put-attribute>
+		<put-attribute name="body"value="/WEB-INF/pages/manufacturer/manufacturer-list.jsp"></put-attribute>
+	</definition>
+
+	<definition name="manufacturer/edit/id/{id}"
+		extends="base-definition">
+		<put-attribute name="title" value="Manufacturer Edit"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/pages/manufacturer/manufacturer-edit.jsp"></put-attribute>
+	</definition>
+
+	<definition name="manufacturer/details/id/{id}"
+		extends="base-definition">
+		<put-attribute name="title" value="Manufacturer details"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/pages/manufacturer/manufacturer-details.jsp"></put-attribute>
+	</definition>
+
+	<definition name="manufacturer/confirm"
+		extends="base-definition">
+		<put-attribute name="title" value="Manufacturer Confirm"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/pages/manufacturer/manufacturer-confirm.jsp"></put-attribute>
+	</definition>
+
+	<definition name="manufacturer/manufacturer-add"
+		extends="base-definition">
+		<put-attribute name="title" value="Manufacturer Confirm"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/pages/manufacturer/manufacturer-add.jsp"></put-attribute>
+	</definition>
+
+	<!-- CONTACT PERSON -->
+
+	<definition name="contact/details/id/{id}" extends="base-definition">
+		<put-attribute name="title" value="Contacts details"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/pages/contact/contact-details.jsp"></put-attribute>
+	</definition>
+
+	<definition name="contact/confirm" extends="base-definition">
+		<put-attribute name="title" value="Contact Confirm"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/pages/contact/contact-confirm.jsp"></put-attribute>
+	</definition>
+
+	<definition name="contact/contact-add"
+		extends="base-definition">
+		<put-attribute name="title" value="Contact Confirm"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/pages/contact/contact-add.jsp"></put-attribute>
+	</definition>
+</tiles-definitions>
